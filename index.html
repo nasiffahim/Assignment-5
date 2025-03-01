@@ -36,7 +36,7 @@
                     <img src="assets/checkbox.png" alt="" class="h-8 w-8">
                     <p id="total-task" class="text-3xl font-bold">14</p>
                 </div>
-                <img src="assets/theme-btn.png" alt="" class="bg-[#F4F7FF] px-3 py-3 rounded-full h-16">
+                <img src="assets/theme-btn.png" alt="" class="bg-[#F4F7FF] px-3 py-3 rounded-full h-16 cursor-pointer" id="theme-btn">
             </div>            
         </div>
     </header>
@@ -45,7 +45,7 @@
         <div class="flex gap-6">
             <div class="w-[1146px]">
                 <header class="bg-white px-6 py-6 rounded-t-2xl border-b-2 border-dashed border-[#cad0ff] flex gap-6">
-                    <div class="flex justify-evenly items-center w-[263px] h-[128px] bg-[#F4F7FF] rounded-2xl">
+                    <div class="flex justify-evenly items-center w-[220px] h-[128px] bg-[#F4F7FF] rounded-2xl">
                         <div class="w-16 h-16 bg-white rounded-full flex justify-center items-center">
                             <img src="assets/checkbox.png" alt="" class="w-7 h-7">
                         </div>                        
@@ -60,23 +60,23 @@
                         <p class="text-2xl text-white">Discover Something <br> New Today!</p>
                     </div>
 
-                    <div class="flex justify-evenly items-center w-[263px] h-[128px] bg-[#F4F7FF] rounded-2xl">
-                        <div class="w-16 h-16 bg-white rounded-full flex justify-center items-center">
+                    <div class="flex justify-evenly items-center w-[290px] h-[128px] bg-[#F4F7FF] rounded-2xl">
+                        <div class="w-24 h-16 bg-white rounded-full flex justify-center items-center mx-5">
                             <img src="assets/calender.png" alt="" class="w-7 h-7">
                         </div>                        
                         <div class="font-poppins">
-                            <p class="text-[22px]">Wed ,<br><span class="font-bold">Jul 28 2025 </span></p>
+                            <p class="text-3xl"><span id="dateTime" class="font-bold"></span></p>
                         </div>
                     </div>
                 </header>
 
                 <section class="font-poppins px-6 py-8 bg-white rounded-b-2xl">
                     <div class="grid grid-cols-3 gap-9">
-                        <div class="w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
+                        <div class="task-info w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
                             <div class="bg-white w-28 h-10 px-4 py-2 rounded-lg mb-4">
                                 <p class="text-base">ShopEase</p>
                             </div>                            
-                            <h3 class="text-2xl font-medium mb-4">Fix Mobile Button Issue </h3>
+                            <h3 class="task-title text-2xl font-medium mb-4">Fix Mobile Button Issue </h3>
                             <div class="w-[294px] h-[92px] bg-white px-4 pt-4 pb-5 rounded-xl mb-[14px]">
                                 <p class="line-clamp-2">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                             </div>
@@ -85,19 +85,17 @@
                                     <p>Deadline</p>
                                     <p class="font-medium">21 March 2025</p> 
                                 </div> 
-                                <div class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">
-                                    <button>Completed</button>
-                                </div>                               
-                                
+                                <div >
+                                    <button class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">Completed</button>
+                                </div>  
                             </div>
-                            
-                            
                         </div>
-                        <div class="w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
+
+                        <div class="task-info w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
                             <div class="bg-white w-28 h-10 px-4 py-2 rounded-lg mb-4">
                                 <p class="text-base">CloudSync</p>
                             </div>                            
-                            <h3 class="text-2xl font-medium mb-4">Add Dark Mode </h3>
+                            <h3 class="task-title text-2xl font-medium mb-4">Add Dark Mode </h3>
                             <div class="w-[294px] h-[92px] bg-white px-4 pt-4 pb-5 rounded-xl mb-[14px]">
                                 <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
                             </div>
@@ -106,19 +104,17 @@
                                     <p>Deadline</p>
                                     <p class="font-medium">21 March 2025</p> 
                                 </div> 
-                                <div class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">
-                                    <button>Completed</button>
-                                </div>                              
-                                
+                                <div >
+                                    <button class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">Completed</button>
+                                </div>   
                             </div>
-                            
-                            
                         </div>
-                        <div class="w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
+
+                        <div class="task-info w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
                             <div class="bg-white w-28 h-10 px-4 py-2 rounded-lg mb-4">
                                 <p class="text-base">SwiftPay</p>
                             </div>                            
-                            <h3 class="text-2xl font-medium mb-4">Optimize  Home page  </h3>
+                            <h3 class="task-title text-2xl font-medium mb-4">Optimize  Home page  </h3>
                             <div class="w-[294px] h-[92px] bg-white px-4 pt-4 pb-5 rounded-xl mb-[14px]">
                                 <p class="line-clamp-2">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                             </div>
@@ -127,19 +123,17 @@
                                     <p>Deadline</p>
                                     <p class="font-medium">21 March 2025</p> 
                                 </div> 
-                                <div class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">
-                                    <button>Completed</button>
-                                </div>                              
-                                
+                                <div >
+                                    <button class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">Completed</button>
+                                </div>     
                             </div>
-                            
-                            
                         </div>
-                        <div class="w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
+
+                        <div class="task-info w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
                             <div class="bg-white w-28 h-10 px-4 py-2 rounded-lg mb-4">
                                 <p class="text-base">Meta</p>
                             </div>                            
-                            <h3 class="text-2xl font-medium mb-4">Add new emoji 🤲 </h3>
+                            <h3 class="task-title text-2xl font-medium mb-4">Add new emoji 🤲 </h3>
                             <div class="w-[294px] h-[92px] bg-white px-4 pt-4 pb-5 rounded-xl mb-[14px]">
                                 <p class="line-clamp-2">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                             </div>
@@ -148,19 +142,17 @@
                                     <p>Deadline</p>
                                     <p class="font-medium">21 March 2025</p> 
                                 </div> 
-                                <div class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">
-                                    <button>Completed</button>
-                                </div>                                
-                                
+                                <div >
+                                    <button class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">Completed</button>
+                                </div>  
                             </div>
-                            
-                            
                         </div>
-                        <div class="w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
+
+                        <div class="task-info w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
                             <div class="bg-white w-28 h-10 px-4 py-2 rounded-lg mb-4">
                                 <p class="text-base">Google</p>
                             </div>                            
-                            <h3 class="text-2xl font-medium mb-4">Integrate OpenAI API </h3>
+                            <h3 class="task-title text-2xl font-medium mb-4">Integrate OpenAI API </h3>
                             <div class="w-[294px] h-[92px] bg-white px-4 pt-4 pb-5 rounded-xl mb-[14px]">
                                 <p class="line-clamp-2">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                             </div>
@@ -169,19 +161,17 @@
                                     <p>Deadline</p>
                                     <p class="font-medium">21 March 2025</p> 
                                 </div> 
-                                <div class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">
-                                    <button>Completed</button>
-                                </div>                              
-                                
+                                <div >
+                                    <button class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">Completed</button>
+                                </div>   
                             </div>
-                            
-                            
                         </div>
-                        <div class="w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
+
+                        <div class="task-info w-[342px] h-[317px] px-6 py-6 rounded-2xl bg-[#F4F7FF]">
                             <div class="bg-white w-28 h-10 px-4 py-2 rounded-lg mb-4">
                                 <p class="text-base">Glassdoar</p>
                             </div>                            
-                            <h3 class="text-2xl font-medium mb-4">Improve Job searching </h3>
+                            <h3 class="task-title text-2xl font-medium mb-4">Improve Job searching </h3>
                             <div class="w-[294px] h-[92px] bg-white px-4 pt-4 pb-5 rounded-xl mb-[14px]">
                                 <p class="line-clamp-2">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                             </div>
@@ -190,14 +180,11 @@
                                     <p>Deadline</p>
                                     <p class="font-medium">21 March 2025</p> 
                                 </div> 
-                                <div class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">
-                                    <button>Completed</button>
-                                </div>                                
-                                
+                                <div >
+                                    <button class="task-done w-[135px] h-[44px] bg-[#3752FD] text-white flex items-center justify-center rounded-lg">Completed</button>
+                                </div>    
                             </div>
-                            
-                            
-                        </div>
+                        </div>                        
                     </div>
                 </section>
             </div>
@@ -207,7 +194,7 @@
                     <p class="font-medium text-xl">Activity Log</p>
                 </div>
                 <div class="text-white flex items-center justify-center border-b-2 border-dashed border-[#cad0ff] pb-5">
-                    <button class="w-[135px] h-[44px] bg-[#3752FD] rounded-lg">Clear History</button>
+                    <button id="btn-clear-history" class="w-[135px] h-[44px] bg-[#3752FD] rounded-lg">Clear History</button>
                 </div>  
 
                 <div id="activity-log" class="activity-history"></div>
@@ -218,5 +205,8 @@
 
     <script src="./scripts/route.js"></script>
     <script src="./scripts/task.js"></script>
+    <script src="./scripts/dateTime.js"></script>
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/deleteHistory.js"></script>
 </body>
 </html>

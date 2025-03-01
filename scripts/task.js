@@ -1,12 +1,22 @@
 // task completed function
-const taskDoneElements = document.querySelectorAll(".task-done");
+
+const taskCompleted = document.querySelectorAll(".task-info");
 
 const activityLog = document.getElementById('activity-log');
 
-for (let i = 0; i < taskDoneElements.length; i++) {
-    taskDoneElements[i].addEventListener("click", function() {
-        alert("You have completed the task!")
-        const button = taskDoneElements[i].querySelector("button");
+let count = 0;
+
+for (let i = 0; i < taskCompleted.length; i++) {
+    const taskComplete = taskCompleted[i].querySelector('button')
+    taskComplete.addEventListener("click", function() {
+        alert("Board Updated Successfully!"); 
+        count++;
+        if(count === taskCompleted.length){
+            alert("Congrats!!! You have completed all the current tasks!");
+        }        
+
+        const button = taskCompleted[i].querySelector(".task-done");
+        const taskTitle = taskCompleted[i].querySelector(".task-title").innerText;
         const taskRemain = document.getElementById("task-remain").innerText;
         const convertRemainTask = parseFloat(taskRemain);
         const remainTask = convertRemainTask - 1;
@@ -18,10 +28,10 @@ for (let i = 0; i < taskDoneElements.length; i++) {
         document.getElementById("total-task").innerText = allTask;
 
         button.disabled = true;
-        taskDoneElements[i].style.backgroundColor = '#A1A1A1';
+        button.style.backgroundColor = '#A1A1A1';
 
         const newText = document.createElement('p');
-        newText.innerText = `You have completed the task no 1 at this time of the day`;
+        newText.innerText = `You have completed the task ${taskTitle} at ${new Date().toLocaleString()}`;
         newText.classList.add('activity-history');
         newText.style.backgroundColor = '#F4F7FF';
         activityLog.appendChild(newText);
