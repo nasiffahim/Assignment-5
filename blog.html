@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        .font-poppins{
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FF]">
+    <header class="navbar max-w-screen-2xl mx-auto py-5">
+        <div class="navbar bg-base-100 rounded-xl px-6 py-4 flex justify-between">
+            <div class="gap-2">
+                <img src="assets/logo.png" alt="">
+                <h3 class="font-poppins text-4xl">Dev<span class="font-bold">Board</span></h3>
+            </div>
+            <div id="home-page" class="w-[135px] h-[44px] bg-[#3752FD] text-white font-semibold flex items-center justify-center rounded-lg cursor-pointer">
+                Back to Desk
+            </div>            
+        </div>
+    </header>
+
+    <main>
+        <h1 class="text-2xl font-bold text-center">Blogs</h1>
+
+        <div class="max-w-screen-2xl mx-auto my-5 py-5 px-5 rounded-lg bg-white">
+            <h1 class="text-xl font-bold border-b-2 border-dashed border-[#cad0ff] pb-3">Question-1: What are the different ways to select an element in the DOM?</h1>
+            <p class="text-xl pt-3">There are 5 ways to select an element in DOM, getElementsByTagName(), getElementsByClassName(), getElementById(), querySelector(), querySelectorAll(). In most cases we will use the getElementById() functionality but other cases also has some uses as well. The easiest way to find an HTML element in the DOM, is by using the element id. If the element is found, the method will return the element as an object (in element). If the element is not found, element will contain null.</p>
+        </div>
+        <div class="max-w-screen-2xl mx-auto my-5 py-5 px-5 rounded-lg bg-white">
+            <h1 class="text-xl font-bold border-b-2 border-dashed border-[#cad0ff] pb-3">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+            <p class="text-xl pt-3">Key differences between interHeml, innerText and textContent <br>
+                1.innerHtml returns all text, including html tags, that is contained by an element. <br>
+                2.innerText returns all text contained by an element and all its child elements. <br>
+                3.textContents is all text contained by an element and all its children that are for formatting purposes only.</p>
+        </div>
+        <div class="max-w-screen-2xl mx-auto my-5 py-5 px-5 rounded-lg bg-white">
+            <h1 class="text-xl font-bold border-b-2 border-dashed border-[#cad0ff] pb-3">Question-3: What is event delegation in the DOM?</h1>
+            <p class="text-xl pt-3">Event delegation is a JavaScript process where instead of adding separate event listeners to multiple child elements, a single listener is placed on their parent. This approach takes advantage of event bubbling, when an event occurs in the target element and it moves upward in its DOM tree. This method works well when there is a large number of dynamically created elements, as it enhances performance by requiring only one event listener rather than multiple individual ones.</p>
+        </div>
+        <div class="max-w-screen-2xl mx-auto my-5 py-5 px-5 rounded-lg bg-white">
+            <h1 class="text-xl font-bold border-b-2 border-dashed border-[#cad0ff] pb-3">Question-4: What is event bubbling in the DOM?</h1>
+            <p class="text-xl pt-3">Event bubbling is when an event starts from the element that was clicked, it can be a child element or a div container and then travels up to its parent, grandparent, and so on, until it reaches the body tag of the html file. Inner (child) elements execute their event listeners first, followed by outer (parent) elements as the event propagates upward. </p>
+        </div>
+        <div class="max-w-screen-2xl mx-auto my-5 py-5 px-5 rounded-lg bg-white">
+            <h1 class="text-xl font-bold border-b-2 border-dashed border-[#cad0ff] pb-3">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+            <p class="text-xl pt-3">In JavaScript we can create elements, add them to the DOM, and remove them as needed. <br>
+                1. Create an element with document.createElement("tagName"), here tagName is the html tags such as p, h1, div etc. <br>
+                2. Adding an element by using .appendChild() method, this adds the new element inside the parent element. <br>
+                3. Removing an element by using .remove() or a specific child element then .removeChild() method, this removes an existing element from the parent element.
+            </p>
+        </div>
+    </main>
+
+
+    <script src="./scripts/route.js"></script>
+</body>
+</html>
