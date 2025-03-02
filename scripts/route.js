@@ -16,6 +16,6 @@ const homePageRoute = document.getElementById("home-page");
 
 if(homePageRoute) {
     homePageRoute.addEventListener("click", function (){
-        window.location.href= '/index.html';
+        window.location.href= './index.html';
     })
 }
