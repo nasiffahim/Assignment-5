@@ -4,7 +4,7 @@ const blogPageRoute = document.getElementById("blog-page");
 
 if(blogPageRoute) {
     blogPageRoute.addEventListener("click", function (){
-        window.location.href= '/blog.html';
+        window.location.href= './blog.html';
     })
 }
 
